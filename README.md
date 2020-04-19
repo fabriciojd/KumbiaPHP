@@ -1,50 +1,47 @@
-![KumbiaPHP logo](https://rawgit.com/kumbiaphp/kumbiaphp/1.0/default/public/img/kumbiaphp.svg)
+![KumbiaPHP logo](https://rawgit.com/kumbiaphp/kumbiaphp/master/default/public/img/kumbiaphp.svg)
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP/?branch=1.0)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP/badges/quality-score.png)](https://scrutinizer-ci.com/g/KumbiaPHP/KumbiaPHP)
 [![Code Climate](https://codeclimate.com/github/KumbiaPHP/KumbiaPHP/badges/gpa.svg)](https://codeclimate.com/github/KumbiaPHP/KumbiaPHP)
-[![Slack](http://slack.kumbiaphp.com/badge.svg)]
-(http://slack.kumbiaphp.com)
-![PHP7 ready](https://rawgit.com/kumbiaphp/kumbiaphp/1.0/default/public/img/php7.svg)
+[![Slack](http://slack.kumbiaphp.com/badge.svg)](http://slack.kumbiaphp.com)
+![PHP7 ready](https://rawgit.com/kumbiaphp/kumbiaphp/master/default/public/img/php7.svg)
+
+Español | [English](README.EN.md)
 
 Fácil, rápido y en español
 (Or should I say fast and easy?)
 
 ---
-Bienvenidos a KumbiaPHP Framework  Versión 1.0
+## Bienvenidos a KumbiaPHP Framework  Versión 1.0
 
 Manual en construcción de la 1.0:
 
-Español : https://github.com/KumbiaPHP/Documentation/tree/master/es
+Español: https://github.com/KumbiaPHP/Documentation/tree/master/es
 
-English : https://github.com/KumbiaPHP/Documentation/tree/master/en
+English: https://github.com/KumbiaPHP/Documentation/tree/master/en
 
-Ayúdanos a traducir el manual al inglés https://crowdin.com/project/kumbiaphp-doc
+Ayúdanos a traducir el manual al inglés: http://translate.kumbiaphp.com
 
 ## Slack KumbiaPHP Channel in spanish and english
 http://slack.kumbiaphp.com (new)
 
+## Framework PHP más rápido según benchmark independiente
+https://www.techempower.com/benchmarks/#section=data-r18&hw=ph&test=fortune&l=zik073-f&w=0-jz6rk-0&c=4
 
-##Change Log
-* Requiere PHP 5.4 como mínimo, recomendado usar PHP 5.6, 7.0 o 7.1
-
+## Change Log
+* Requiere PHP 5.4 como mínimo, recomendado usar PHP 5.6, 7.1, 7.2 o 7.3
 * CRUD: http://wiki.kumbiaphp.com/V1.0_CRUD_en_KumbiaPHP_Framework
-* API para usuarios de la beta2: http://www.kumbiaphp.com/api/beta2/
-* API para los desarrolladores del core: http://www.kumbiaphp.com/api/beta2-dev/
- 
-Seguimos trabajando para actualizar bien el phpdoc y API.
-
 
 Comunidad
 ===
-* http://www.kumbiaphp.com  Web oficial  (pronto en KumbiaPHP http://proto.kumbiaphp.com, bienvenida ayuda con el diseño)
+* https://www.kumbiaphp.com  Web oficial  (pronto en KumbiaPHP http://proto.kumbiaphp.com, bienvenida ayuda con el diseño).
 * http://wiki.kumbiaphp.com Wiki
 * http://foro.kumbiaphp.com Foro de KumbiaPHP
 * http://groups.google.com/group/kumbia/   Grupo de KumbiaPHP +1.500 programadores
 * https://twitter.com/KumbiaPHP Twitter
+* https://www.facebook.com/kumbia.fw/ Facebook page
 * http://slack.kumbiaphp.com  Slack (nuevo y recomendado)
-* irc://irc.freenode.org/#kumbiaphp  IRC [![Visita nuestro canal IRC channel](https://kiwiirc.com/buttons/irc.freenode.org/kumbiaphp.png)](https://kiwiirc.com/client/irc.freenode.org/?nick=invitado|?&theme=cli#kumbiaphp) Actualmente no usamos el IRC
 * Largo historial de repos durante estos años ;)  cvs(sf.net), svn(sf.net), bzr(launchpad.com) y ahora git(github.com)
 
 Licencia
 ===
-New BSD
+BSD-3-Clause https://opensource.org/licenses/BSD-3-Clause

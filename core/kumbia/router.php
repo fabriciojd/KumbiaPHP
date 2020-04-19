@@ -5,17 +5,13 @@
  * LICENSE
  *
  * This source file is subject to the new BSD license that is bundled
- * with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://wiki.kumbiaphp.com/Licencia
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@kumbiaphp.com so we can send you a copy immediately.
+ * with this package in the file LICENSE.
  *
  * @category   Kumbia
  * @package    Router
- * @copyright  Copyright (c) 2005 - 2017 Kumbia Team (http://www.kumbiaphp.com)
- * @license    http://wiki.kumbiaphp.com/Licencia     New BSD License
+ *
+ * @copyright  Copyright (c) 2005 - 2019 KumbiaPHP Team (http://www.kumbiaphp.com)
+ * @license    https://github.com/KumbiaPHP/KumbiaPHP/blob/master/LICENSE   New BSD License
  */
 
 /**
@@ -30,19 +26,19 @@
  */
 class Router
 {
+
     /**
-     * Array estatico con las variables del router
+     * Array estático con las variables del router
      *
      * @var array
      */
-
     protected static $vars = array(
-        'method'          => null, //Método usado GET, POST, ...
-        'route'           => null, //Ruta pasada en el GET
-        'module'          => null, //Nombre del módulo actual
+        'method'          => '', //Método usado GET, POST, ...
+        'route'           => '', //Ruta pasada en el GET
+        'module'          => '', //Nombre del módulo actual
         'controller'      => 'index', //Nombre del controlador actual
         'action'          => 'index', //Nombre de la acción actual, por defecto index
-        'parameters'      => array(), //Lista los parámetros adicionales de la URL
+        'parameters'      => [], //Lista los parámetros adicionales de la URL
         'controller_path' => 'index',
         'default_path'    => APP_PATH, //Path donde se encuentran los controller
         'suffix'          => '_controller.php', //suffix for controler
@@ -54,7 +50,7 @@ class Router
      * @var String
      */
     protected static $router = 'KumbiaRouter';
-    //Es el router por defecto;
+    //Es el router por defecto
 
     /**
      * Indica si esta pendiente la ejecución de una ruta por parte del dispatcher
@@ -66,6 +62,8 @@ class Router
     /**
      * Procesamiento basico del router
      * @param string $url
+     * 
+     * @throws KumbiaException
      * @return void
      */
     public static function init($url)
@@ -84,6 +82,8 @@ class Router
      * Ejecuta una url
      *
      * @param string $url
+     * 
+     * @throws KumbiaException
      * @return Controller
      */
     public static function execute($url)
@@ -113,7 +113,10 @@ class Router
 
     /**
      * Realiza el dispatch de la ruta actual
+     * 
+     * @param Controller $cont  Controlador a usar
      *
+     * @throws KumbiaException
      * @return Controller
      */
     private static function dispatch($cont)
@@ -131,7 +134,7 @@ class Router
         }
 
         //k_callback y __constructor metodo reservado
-        if ($cont->action_name == 'k_callback' || $reflectionMethod->isConstructor()) {
+        if ($cont->action_name === 'k_callback' || $reflectionMethod->isConstructor()) {
             throw new KumbiaException('Esta intentando ejecutar un método reservado de KumbiaPHP');
         }
 
@@ -160,6 +163,9 @@ class Router
 
     /**
      * Redirecciona la ejecución internamente
+     * 
+     * @throws KumbiaException
+     * @return void
      */
     protected static function isRouted()
     {
@@ -181,6 +187,7 @@ class Router
      * <code>Router::get('controller')</code>
      *
      * @param string $var (opcional) un atributo: route, module, controller, action, parameters o routed
+     * 
      * @return array|string con el valor del atributo
      */
     public static function get($var = '')
@@ -193,6 +200,8 @@ class Router
      *
      * @param array $params array de $vars (móddulo, controller, action, params, ...)
      * @param boolean $intern si la redirección es interna
+     * 
+     * @return void
      */
     public static function to($params, $intern = false)
     {
