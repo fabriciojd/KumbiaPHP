@@ -10,7 +10,7 @@
  * @category   KumbiaPHP
  * @package    Helpers
  *
- * @copyright  Copyright (c) 2005 - 2019 KumbiaPHP Team (http://www.kumbiaphp.com)
+ * @copyright  Copyright (c) 2005 - 2020 KumbiaPHP Team (http://www.kumbiaphp.com)
  * @license    https://github.com/KumbiaPHP/KumbiaPHP/blob/master/LICENSE   New BSD License
  */
 /**
@@ -67,7 +67,7 @@ class Form
         }
         // Filtrar caracteres especiales
         if (!$is_check && $value !== null && $filter) {
-            $value = htmlspecialchars($value, ENT_COMPAT, APP_CHARSET);
+            $value = htmlspecialchars($value, ENT_COMPAT);
         }
         // Devuelve los datos
         return array($id, $name, $value);
@@ -318,7 +318,7 @@ class Form
         list($id, $name, $value) = self::getFieldData($field, $value);
         //Si se quiere agregar blank
         $options = empty($blank) ? '' :
-        '<option value="">'.htmlspecialchars($blank, ENT_COMPAT, APP_CHARSET).'</option>';
+        '<option value="">'.htmlspecialchars($blank, ENT_COMPAT).'</option>';
         foreach ($data as $k => $v) {
             $val = self::selectValue($v, $k, $itemId);
             $text = self::selectShow($v, $show);
@@ -341,7 +341,7 @@ class Form
     public static function selectValue($item, $key, $id)
     {
         return htmlspecialchars(is_object($item) ? $item->$id : $key,
-                                ENT_COMPAT, APP_CHARSET);
+                                ENT_COMPAT);
     }
 
     /**
@@ -371,7 +371,7 @@ class Form
     {
         $value = (is_object($item) && !empty($show)) ? $item->$show : (string) $item;
 
-        return htmlspecialchars($value, ENT_COMPAT, APP_CHARSET);
+        return htmlspecialchars($value, ENT_COMPAT);
     }
 
     /**

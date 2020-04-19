@@ -9,7 +9,7 @@
  *
  * @category   View
  *
- * @copyright  Copyright (c) 2005 - 2019 KumbiaPHP Team (http://www.kumbiaphp.com)
+ * @copyright  Copyright (c) 2005 - 2020 KumbiaPHP Team (http://www.kumbiaphp.com)
  * @license    https://github.com/KumbiaPHP/KumbiaPHP/blob/master/LICENSE   New BSD License
  */
 
@@ -374,7 +374,7 @@ class KumbiaView
             return self::$_controller;
         }
 
-        return isset(self::$_controller[$var]) ? self::$_controller[$var] : null;
+        return self::$_controller[$var] ?? null;
     }
 }
 
@@ -383,11 +383,10 @@ class KumbiaView
  * aplicacion.
  *
  * @param string $string
- * @param string $charset
  *
  * @return string
  */
-function h($string, $charset = APP_CHARSET)
+function h(string $string)
 {
-    return htmlspecialchars($string, ENT_QUOTES, $charset);
+    return htmlspecialchars($string, ENT_QUOTES);
 }

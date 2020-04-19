@@ -7,7 +7,7 @@
  * This source file is subject to the new BSD license that is bundled
  * with this package in the file LICENSE.
  *
- * @copyright  Copyright (c) 2005 - 2019 KumbiaPHP Team (http://www.kumbiaphp.com)
+ * @copyright  Copyright (c) 2005 - 2020 KumbiaPHP Team (http://www.kumbiaphp.com)
  * @license    https://github.com/KumbiaPHP/KumbiaPHP/blob/master/LICENSE   New BSD License
  */
 
@@ -28,7 +28,7 @@
  * @TODO
  * REVISAR ESTA SECCIÓN
  */
-const APP_CHARSET = 'UTF-8';
+
 
 /*
  * Indicar si la aplicacion se encuentra en producción
@@ -90,13 +90,13 @@ define('PUBLIC_PATH', substr($_SERVER['SCRIPT_NAME'], 0, -9)); // - index.php st
 /**
  * Obtiene la url usando PATH_INFO.
  */
-$url = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+$url = $_SERVER['PATH_INFO'] ?? '/';
 
 /**
  * Obtiene la url usando $_GET['_url']
  * Cambiar también en el .htaccess.
  */
- //$url = isset($_GET['_url']) ? $_GET['_url'] : '/';
+ //$url = $_GET['_url'] ?? '/';
 
 /**
  * Carga el gestor de arranque
